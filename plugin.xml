@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="hangge-swift-plugin"
+    version="0.1">
+     
+    <name>HanggeSwiftPlugin</name>
+    <description>This plugin use to verify password</description>
+     
+    <js-module src="hangge-swift-plugin.js">
+        <clobbers target="window.HanggeSwiftPlugin" />
+    </js-module>
+     
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HanggeSwiftPlugin">
+                <param name="ios-package" value="HWPHanggeSwiftPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/HanggeSwiftPlugin.swift" />
+    </platform>
+     
+</plugin>
+
